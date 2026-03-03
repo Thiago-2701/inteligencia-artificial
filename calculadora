@@ -1,0 +1,62 @@
+#while
+senha = "eu faço programa"
+tentativa = input("digitie sua senha\n")
+while senha != tentativa:
+    print("tente de novo")
+    tentativa = input ("digite a senha\n")
+print("ok, acesso liberado")
+                      
+
+def somar (a, b): 
+    return a + b
+
+def subtrair(a, b):
+     return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    return a / b
+
+def elevar(a, b):
+    return a ** b
+
+
+def menu():
+    op = int(
+        input("1- somar\n2-subtrair\n3-multiplicar\n4-dividir\n5-elevar\n")
+    )
+    if op < 1 or op > 5:
+        print(f"a opção {op} é invalido")
+ 
+    else:
+        a = int(input("digite o primeiro operando"))
+        b = int(input("digite o segundo operando"))
+        if op == 1: 
+            res = somar(a, b)
+            print(res)
+        elif op == 2:
+            res = subtrair(a,b)
+            print(res)
+        elif op == 3:
+            res = multiplicar(a, b)
+            print(res)
+        elif op == 4:
+            res = dividir(a, b)
+            print(res)
+        elif op == 5:
+            res = elevar(a, b)
+            print(res)
+        else:
+            # print(str(op) + "é uma opção invalida")
+            print(f"{op}é uma opção invalida")
+
+
+menu()
+
+
+res1 = somar (2, 3)
+res2 = somar(5, 6)
+
+print(res1, res2)
